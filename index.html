@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy Website</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style/style.css">
+
+  
+
+</head>
+<body>
+    <header>
+        <nav class="w-11/12 mx-auto py-3 flex items-center justify-between ">
+            <div class="flex w-[50px]  ">
+                <img  src="images/logo.webp" alt="">
+               <h1 class="font-bold text-2xl">Peddy</h1>
+               
+            </div>
+            <div id="text-container"    class="flex justify-around gap-5 ">
+                <p class="font-bold">Home</p>
+                <p class="font-bold">Shop</p>
+                <p class="font-bold">Contact</p>
+            </div>
+            <div class="w-[50px] h-[50px]  rounded">
+                <img    src="https://img.icons8.com/?size=100&id=82751&format=png&color=000000" alt="">
+            </div>
+        </nav>
+
+        <div class=" p-6 rounded-lg  text-center">
+            <p id="banner-text" class="font-bold text-2xl">Bringing Families Together </p>
+            <h1 class="text-5xl font-bold mt-2">Your Path to Adoption <br> Starts Here</h1>
+            <p id="banner-text" class="mt-4 font-bold">It is a long established fact that a reader will be distracted by the readable content of a page when looking <br> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+           
+            
+        </div>
+        <div id="view-more-button">
+            <button onclick="scrollToMainSection()"    id="banner-button" class=" btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-5 text-white font-bold">View More</button>
+        </div>
+        <div class="flex  justify-center mt-2">
+            <img src="images/pet.webp" alt="">
+        </div>
+    </header>
+    <main id="main-section">
+        <div class=" p-6 rounded-lg  text-center">
+            <h1 class="text-3xl font-bold mt-2">Adopt Your Best Friend</h1>
+            <p id="banner-text" class="font-bold mt-2">It is a long established fact that a reader will be distracted by the readable content of a  <br>page when looking at its layout. The point of using Lorem Ipsum is that it has a. </p>
+        </div>
+       
+        <div id="categories" class="py-3 gap-5 flex justify-center"> </div>
+
+        <div class="flex  justify-between w-11/12 mx-auto mt-2">
+            <h2 class="font-bold text-3xl mt-2">Best Deal For you</h2>
+            <button    id="sortByPriceButton" class=" btn-xs sm:btn-sm md:btn-md lg:btn-lg mt-5 text-white font-bold">Sort By Price</button>
+
+        </div>
+
+        <div class="flex w-11/12 mx-auto gap-5">
+            <section id="petImformation" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-20"> </section>
+            <!-- Right side: Liked Pets Thumbnails -->
+            <section id="likedPets" class="w-1/4 bg-gray-100 p-4 rounded-lg mt-5">
+              <h2 class="font-bold text-2xl mb-4">Liked Pets</h2>
+              <div id="likedPetsContainer" class="grid grid-cols-2 gap-4"></div>
+          </section>
+
+
+
+
+
+
+
+        <!-- load spinner -->
+        <div id="loadingSpinner" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+            <div class="loader"></div>
+        </div>
+
+
+
+        <!-- Modal Structure -->
+<div id="petModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg w-11/12 md:w-1/2 lg:w-1/3 relative">
+      <button id="closeModalButton" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 font-bold">&times;</button>
+      <div id="modalBody">
+        <!-- Pet details will be dynamically injected here -->
+      </div>
+    </div>
+  </div>
+  
+  
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+              <h2><span class="paw-icon"><img  src="images/logo.webp" alt=""></span> Peddy</h2>
+              <p>Location: av. Washington 165, NY, CA 54003</p>
+              <p>Phone: +31 85 964 47 25</p>
+              <p>Email: info@yourdomain.com</p>
+              <p>Opening hours: 9:00 AM - 5:00 PM</p>
+              <div id="many-icon" class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=13912&format=png&color=000000" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=6BmXkftCQhH8&format=png&color=000000" alt="Twitter"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=19318&format=png&color=000000" alt="YouTube"></a>
+                <a href="#"><img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram"></a>
+              </div>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Useful Links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Animals</a></li>
+                <li><a href="#">Foundation</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section">
+              <h3>Drop a Message</h3>
+              <form action="#">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+    </footer>
+
+
+
+    <script src="script/view-more.js"></script>
+    <script src="script/pet.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/sortbyprice.js"></script>
+    <script src="script/adoptmodal.js"></script>
+    
+     
+</body>
+</html>
+
+    
+
+
+
+    
+    
+</body>
+</html>

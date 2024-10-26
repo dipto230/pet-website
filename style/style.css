@@ -1,0 +1,359 @@
+/* <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> */
+
+
+
+#text-container{
+    color: rgba(19, 19, 19, 0.6);
+}
+#banner-text{
+    color: rgba(19, 19, 19, 0.6);
+}
+#sortByPriceButton{
+    border-radius: 12px;
+
+background: rgb(14, 122, 129);
+
+
+}
+#banner-button{
+  border-radius: 12px;
+
+  background: rgb(14, 122, 129);
+}
+.btn {
+    display: flex; /* Make the button a flex container */
+    align-items: center; /* Center the icon vertically */
+    padding: 10px; /* Add some padding for spacing */
+    /* Add any other styling you need */
+    color: rgba(14, 122, 129, 0.1);
+    box-sizing: border-box;
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+    width: 150px;
+height: 50px;
+font-size: 24px;
+color: rgb(19, 19, 19);
+
+  }
+  
+  .btn img {
+    width: 25px; /* Set the desired icon size */
+     margin-right: 10px; 
+   
+    
+    
+  }
+  #view-more-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+#adopt-button{
+  box-sizing: border-box;
+  width: 92px;
+height: 40px;
+  color: rgb(14, 122, 129);
+font: bold;
+  border: 1px solid rgba(14, 122, 129, 0.15);
+border-radius: 8px;
+font-size: 18px;
+font-weight: 700;
+}
+#pet-text{
+  color: rgba(19, 19, 19, 0.7);
+}
+#details-button{
+  box-sizing: border-box;
+  width: 92px;
+height: 40px;
+  color: rgb(14, 122, 129);
+font: bold;
+  border: 1px solid rgba(14, 122, 129, 0.15);
+border-radius: 8px;
+font-size: 18px;
+font-weight: 700;
+}
+
+
+
+
+
+
+  
+
+
+
+#sorry-text{
+  color: rgba(19, 19, 19, 0.7);
+}
+
+
+.active{
+  background-color: red;
+  color: white;
+
+}
+
+footer {
+  background-color: #1d1d1d;
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h2, .footer-section h3 {
+  color: #3fc3b9;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #3fc3b9;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #333;
+  color: white;
+}
+
+button {
+  background-color: #3fc3b9;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2a8d83;
+}
+
+.paw-icon {
+  color: #3fc3b9;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+#many-icon{
+  display: flex;
+}
+
+
+
+.loader {
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-left-color: #ffffff;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hidden {
+  display: none;
+}
+
+#loadingSpinner {
+  z-index: 9999; /* Ensure it's on top of everything */
+}
+
+
+
+
+
+/* Modal styles */
+#petModal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+}
+
+#petModal.active {
+  display: flex; /* Flexbox for centering the modal */
+  justify-content: center;
+  align-items: center;
+}
+
+#modalBody {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  overflow-y: auto; /* Handle overflow if content is long */
+}
+
+#modalBody img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+/* Modal close button */
+#closeModalButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: #555;
+  cursor: pointer;
+}
+
+#closeModalButton:hover {
+  color: #000;
+}
+
+/* Pet details in modal */
+#modalBody h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+#modalBody p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+#modalBody p strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Adjustments for mobile responsiveness */
+@media (max-width: 768px) {
+  #modalBody {
+    padding: 1rem;
+  }
+
+  #modalBody h2 {
+    font-size: 1.75rem;
+  }
+
+  #modalBody p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Style for the Adopt Modal */
+.adopt-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.adopt-modal .bg-white {
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.adopt-modal img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.adopt-modal p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+  
